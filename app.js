@@ -1,5 +1,5 @@
 'use strict';
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 var express = require('express');
 var bodyParser = require('body-parser');
@@ -18,6 +18,8 @@ app.get('/', function(req, res) {
   var indexPath = path.join(__dirname, 'index.html');
   res.sendFile(indexPath);
 });
+
+app.use('/transactions', require('./routes/transactions'));
 
 
 var server = http.createServer(app);

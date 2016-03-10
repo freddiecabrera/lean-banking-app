@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "engines": {"node": "4.3.1"},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/freddiecabrera/lean-banking-app.git"
